@@ -1,0 +1,27 @@
+<div class="p-5">
+    <div class="container-fluid col-md-4 jumbotron bg-primary shadow-lg rounded p-3">
+        <div class="bg-light p-5">
+            <h4>Login</h4>
+            <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
+                <div class="form-group">
+                    <label for="email"></label>
+                    <input class="form-control" type="text" placeholder="Enter Email or Mobile No."
+                        formControlName="email">
+                </div>
+                <div class="form-group">
+                    <label for="password"></label>
+                    <input class="form-control" type="password" placeholder="Enter Password" formControlName="password">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="w-100 btn btn-primary mt-5">Log in</button>
+                </div>
+                <div class="text-center m-3">
+                    <a class="text-decoration-none" [routerLink]="['/signup']">
+                        <small>Sign up</small>
+                    </a>
+                    <small class="text-dark p-1">If you have not an acount</small>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

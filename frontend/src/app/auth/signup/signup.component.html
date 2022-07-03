@@ -1,0 +1,34 @@
+<div class="p-5">
+    <div class="container-fluid col-md-4 jumbotron bg-primary shadow-lg rounded p-3">
+        <div class="bg-light p-5">
+            <h4>Sign up</h4>
+            <form [formGroup]="signupForm" (ngSubmit)="signup(signupForm.value)">
+                <div class="form-group">
+                    <label for="name"></label>
+                    <input class="form-control" type="text" placeholder="Enter Name" formControlName="name">
+                </div>
+                <div class="form-group">
+                    <label for="email"></label>
+                    <input class="form-control" type="email" placeholder="Enter Email" formControlName="email">
+                </div>
+                <div class="form-group">
+                    <label for="mobileNo"></label>
+                    <input class="form-control" type="text" placeholder="Enter Mobile No." formControlName="mobileNo">
+                </div>
+                <div class="form-group">
+                    <label for="password"></label>
+                    <input class="form-control" type="password" placeholder="Enter Password" formControlName="password">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="w-100 btn btn-primary mt-5">Sign up</button>
+                </div>
+                <div class="text-center m-3">
+                    <a class="text-decoration-none" [routerLink]="['/login']">
+                        <small>Login</small>
+                    </a>
+                    <small class="text-dark p-1">If you have already an acount</small>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

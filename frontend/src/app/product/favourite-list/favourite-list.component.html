@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <div class="row m-3">
+        <div class="col-4 text-center"
+            *ngFor="let list of productList | paginate: {id: 'pagination',itemsPerPage: 3, currentPage: pageNumber, totalItems: total}">
+            <div class="border text-center">
+                <img [src]="list.imgUrl" alt="" width="200">
+            </div>
+            <p>{{list.name}}</p>
+            <button class="btn btn-outline-danger" (click)="removeFromFavourite(list)">Remove from favourite</button>
+        </div>
+    </div>
+
+    <div class="text-center m-5">
+        <div *ngIf="!total">
+            Record Not Found
+        </div>
+        <div *ngIf='total>3'>
+            <pagination-controls id="pagination" previousLabel="Pre" nextLabel="Next"
+                (pageChange)="getItemPage((pageNumber = $event))">
+            </pagination-controls>
+        </div>
+    </div>
+</div>
