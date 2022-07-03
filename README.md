@@ -1,4 +1,4 @@
-#Assessment : List Products and favourite products with add and remove featutes.
+#Assignment : List Products and favourite products with add and remove featutes.
 
 Requirements: 
 1. Node v14 or above
